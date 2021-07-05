@@ -5,10 +5,10 @@ import Join from './components/Join/Join';
 import Chat from './components/Chat/Chat';
 
 import './App.css';
-
+// basename="/ChatNow"
 function App() {
   return (
-    <Router basename="/ChatNow">
+    <Router>
       <Route path="/" exact component={Join} />
       <Route path="/chat" component={Chat} />
     </Router>

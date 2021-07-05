@@ -9,7 +9,6 @@ import Input from '../Input/Input';
 
 import './Chat.css';
 
-// http://localhost:8000 ==> add this if run the project on localhost
 const ENDPOINT = 'https://chat-now012.herokuapp.com/';
 
 let socket;

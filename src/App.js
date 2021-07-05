@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ChatNow">
       <Route path="/" exact component={Join} />
       <Route path="/chat" component={Chat} />
     </Router>

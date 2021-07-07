@@ -14,7 +14,7 @@ const ENDPOINT = 'https://chat-now012.herokuapp.com/';
 
 let socket;
 
-const Chat = ({ location }) => {
+const Chat = ({ location , match }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
@@ -28,6 +28,7 @@ const Chat = ({ location }) => {
 
     setRoom(room);
     setName(name)
+    console.log('location.search.name' , queryString.parse(location.search).name)
 
     socket.emit('join', { name, room }, (error) => {
       if(error) {
@@ -45,6 +46,8 @@ const Chat = ({ location }) => {
       setUsers(users);
     });
 }, []);
+
+  
 
   const sendMessage = (event) => {
     event.preventDefault();

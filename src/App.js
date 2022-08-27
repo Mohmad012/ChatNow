@@ -11,6 +11,7 @@ const App = () => {
     <Router basename="/ChatNow">
       <Route path="/" exact component={Join} />
       <Route path="/chat" component={Chat} />
+      <Route path="/chat?name=:name&room=:room" component={Chat} />
     </Router>
   );
 };
